@@ -10,6 +10,9 @@ const URL =process.env.MONGODB_URL;
 
 app.use(express.json());
 
+app.get("/",async function (req,res){
+  res.send("Server is running Sucessfully")
+})
 
 app.post("/hall",async function(req,res){  //add a new hall in database
     try{
@@ -221,4 +224,4 @@ await connection.close();
         })
 
     
-app.listen(process.env.PORT ||5000 );
+app.listen(process.env.PORT ||5000 ,()=>console.log("server running sucessfully"));
