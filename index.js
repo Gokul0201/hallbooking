@@ -4,7 +4,9 @@ const app = express();
 const mongodb = require("mongodb");
 const mongodbclient = mongodb.MongoClient;
 const dotenv = require("dotenv").config();
-const URL ='mongodb+srv://gokul:admin123@gokul.uxbkh.mongodb.net';
+const URL =process.env.MONGODB_URL;
+
+
 
 app.use(express.json());
 
