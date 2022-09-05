@@ -4,7 +4,7 @@ const app = express();
 const mongodb = require("mongodb");
 const mongodbclient = mongodb.MongoClient;
 const dotenv = require("dotenv").config();
-const URL =process.env.DB;
+const URL ='mongodb+srv://gokul:admin123@gokul.uxbkh.mongodb.net';
 
 app.use(express.json());
 
@@ -219,4 +219,4 @@ await connection.close();
         })
 
     
-app.listen(process.env.PORT ||3000 );
+app.listen(process.env.PORT ||5000 );
